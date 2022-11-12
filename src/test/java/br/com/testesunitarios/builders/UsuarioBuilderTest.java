@@ -31,8 +31,8 @@ public class UsuarioBuilderTest {
 		this.sobrenome = sobrenome;
 	}
 
-	public void builder() {
-		return new Usuario(cpf, nome, sobrenome, null);
+	public Usuario builder() {
+		return new Usuario(cpf, nome, sobrenome, new EmailBuilderTest().build());
 	}
 	
 
