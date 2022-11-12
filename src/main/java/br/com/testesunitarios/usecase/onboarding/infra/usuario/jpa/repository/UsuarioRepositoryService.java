@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.testesunitarios.usecase.onboarding.dominio.usuario.Usuario;
 import br.com.testesunitarios.usecase.onboarding.dominio.usuario.interfaces.RepositorioDeUsuarios;
+import br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.dto.UsuarioConverter;
 import br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.UsuarioJPA;
 
 
@@ -17,8 +18,9 @@ public class UsuarioRepositoryService implements RepositorioDeUsuarios {
 	@Override
 	public void cadastrarUsuario(Usuario usuarioDominio) {
 		
-		UsuarioJPA usuarioJpa = new UsuarioJPA(usuarioDominio);
-		usuarioJPARepository.save(usuarioJpa);		
+		UsuarioJPA converter = UsuarioConverter.usuarioConverter(usuarioDominio);
+		
+		usuarioJPARepository.save(converter);		
 	}
 
 }

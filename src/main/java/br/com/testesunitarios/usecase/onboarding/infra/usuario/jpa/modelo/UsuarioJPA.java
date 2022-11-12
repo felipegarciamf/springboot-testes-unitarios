@@ -4,17 +4,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import br.com.testesunitarios.usecase.onboarding.dominio.usuario.vos.Email;
+import javax.persistence.OneToOne;
 
 @Entity
 public class UsuarioJPA {
 
-	public UsuarioJPA(br.com.testesunitarios.usecase.onboarding.dominio.usuario.Usuario usuario) {
-		this.cpf = usuario.getCpf();
-		this.nome = usuario.getNome();
-		this.sobrenome = usuario.getSobrenome();
-		this.email = usuario.getEmail();
+
+
+	public UsuarioJPA(String cpf, String nome, String sobrenome, EmailJPA email) {
+		this.cpf = cpf;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.email = email;
 	}
 
 	@Id
@@ -27,7 +28,9 @@ public class UsuarioJPA {
 
 	private String sobrenome;
 
-	private Email email;
+	
+	@OneToOne(mappedBy = "usuario")
+	private EmailJPA email;
 
 	public Long getId() {
 		return id;
@@ -61,12 +64,14 @@ public class UsuarioJPA {
 		this.sobrenome = sobrenome;
 	}
 
-	public Email getEmail() {
+	public EmailJPA getEmail() {
 		return email;
 	}
 
-	public void setEmail(Email email) {
+	public void setEmail(EmailJPA email) {
 		this.email = email;
 	}
+
+
 
 }
