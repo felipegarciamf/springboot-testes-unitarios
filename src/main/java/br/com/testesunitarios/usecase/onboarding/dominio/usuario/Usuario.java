@@ -4,12 +4,6 @@ import br.com.testesunitarios.usecase.onboarding.dominio.usuario.vos.Email;
 
 public class Usuario {
 
-	public Usuario(String cpf, String nome, String sobrenome, Email email) {
-		this.cpf = cpf;
-		this.nome = nome;
-		this.sobrenome = sobrenome;
-		this.email = email;
-	}
 
 	private Long id;
 
@@ -20,6 +14,15 @@ public class Usuario {
 	private String sobrenome;
 
 	private Email email;
+
+
+
+	public Usuario(String cpf, String nome, String sobrenome, Email email) {
+		this.cpf = cpf;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.email = email;
+	}
 
 	public Long getId() {
 		return id;

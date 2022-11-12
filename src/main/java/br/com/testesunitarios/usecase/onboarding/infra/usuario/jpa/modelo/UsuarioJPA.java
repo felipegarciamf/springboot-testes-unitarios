@@ -1,5 +1,6 @@
 package br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,7 +30,7 @@ public class UsuarioJPA {
 	private String sobrenome;
 
 	
-	@OneToOne(mappedBy = "usuario")
+	@OneToOne(cascade = CascadeType.ALL)
 	private EmailJPA email;
 
 	public Long getId() {

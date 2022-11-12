@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 @Entity
 public class EmailJPA {
@@ -18,10 +17,6 @@ public class EmailJPA {
 	private Long id;
 
 	private String endereco;
-	
-	
-	@OneToOne
-	private UsuarioJPA usuario;
 	
 
 	public Long getId() {
