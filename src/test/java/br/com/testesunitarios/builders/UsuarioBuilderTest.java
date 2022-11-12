@@ -3,37 +3,44 @@ package br.com.testesunitarios.builders;
 import br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.Usuario;
 
 public class UsuarioBuilderTest {
-	
-	
-	private Long id;
+
+	public UsuarioBuilderTest() {
+		this.cpf = "40173586830";
+		this.nome = "Silas";
+		this.sobrenome = "Garcia";
+		this.email = "teste@gmail.com";
+	}
 
 	private String cpf;
 
 	private String nome;
 
 	private String sobrenome;
-	
+
 	private String email;
-	
-	public void setId(Long id) {
-		this.id = id;
-	}
 
-	public void setCpf(String cpf) {
+	public UsuarioBuilderTest comCpf(String cpf) {
 		this.cpf = cpf;
+		return this;
 	}
 
-	public void setNome(String nome) {
+	public UsuarioBuilderTest comNome(String nome) {
 		this.nome = nome;
+		return this;
 	}
 
-	public void setSobrenome(String sobrenome) {
+	public UsuarioBuilderTest comSobrenome(String sobrenome) {
 		this.sobrenome = sobrenome;
+		return this;
+	}
+	
+	public UsuarioBuilderTest comEmail(String email) {
+		this.email = email;
+		return this;
 	}
 
 	public Usuario builder() {
 		return new Usuario(cpf, nome, sobrenome, new EmailBuilderTest().build());
 	}
-	
 
 }
