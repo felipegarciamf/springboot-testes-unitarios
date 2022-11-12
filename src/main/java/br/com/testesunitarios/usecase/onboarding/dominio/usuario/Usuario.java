@@ -1,21 +1,14 @@
 package br.com.testesunitarios.usecase.onboarding.dominio.usuario;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import br.com.testesunitarios.usecase.onboarding.dominio.usuario.vos.Email;
-import br.com.testesunitarios.usecase.onboarding.dominio.usuario.vos.Telefone;
 
 public class Usuario {
 
-	
-	
-	public Usuario(String cpf, String nome, String sobrenome, Email email, List<Telefone> telefones) {
+	public Usuario(String cpf, String nome, String sobrenome, Email email) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.email = email;
-		this.telefones = telefones;
 	}
 
 	private Long id;
@@ -27,8 +20,6 @@ public class Usuario {
 	private String sobrenome;
 
 	private Email email;
-
-	private List<Telefone> telefones = new ArrayList<>();
 
 	public Long getId() {
 		return id;
@@ -68,14 +59,6 @@ public class Usuario {
 
 	public void setEmail(Email email) {
 		this.email = email;
-	}
-
-	public List<Telefone> getTelefones() {
-		return telefones;
-	}
-
-	public void setTelefones(List<Telefone> telefones) {
-		this.telefones = telefones;
 	}
 
 }

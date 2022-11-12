@@ -1,11 +1,9 @@
 package br.com.testesunitarios.usecase.onboarding.dominio.usuario.dtos;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import br.com.testesunitarios.usecase.onboarding.dominio.usuario.Usuario;
 import br.com.testesunitarios.usecase.onboarding.dominio.usuario.vos.Email;
-import br.com.testesunitarios.usecase.onboarding.dominio.usuario.vos.Telefone;
 
 public class UsuarioForm {
 
@@ -15,9 +13,9 @@ public class UsuarioForm {
 
 	private String sobrenome;
 
-	private Email email;
+	@JsonProperty("endereco_email")
+	private String enderecoEmail;
 
-	private List<Telefone> telefones = new ArrayList<Telefone>();
 
 	public String getCpf() {
 		return cpf;
@@ -43,24 +41,10 @@ public class UsuarioForm {
 		this.sobrenome = sobrenome;
 	}
 
-	public Email getEmail() {
-		return email;
-	}
-
-	public void setEmail(Email email) {
-		this.email = email;
-	}
-
-	public List<Telefone> getTelefones() {
-		return telefones;
-	}
-
-	public void setTelefones(List<Telefone> telefones) {
-		this.telefones = telefones;
-	}
 
 	public Usuario converter() {
-		return new Usuario(cpf, nome, sobrenome, email, telefones);
+		Email email = new Email(enderecoEmail);
+		return new Usuario(cpf, nome, sobrenome, email);
 	}
 
 }
