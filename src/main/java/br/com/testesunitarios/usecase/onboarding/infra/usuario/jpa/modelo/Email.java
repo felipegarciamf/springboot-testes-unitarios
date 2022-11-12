@@ -6,9 +6,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class EmailJPA {
+public class Email {
 
-	public EmailJPA(String endereco) {
+	public Email(String endereco) {
 		this.endereco = endereco;
 	}
 

@@ -2,7 +2,7 @@ package br.com.testesunitarios.usecase.onboarding.dominio.usuario.vos;
 
 import javax.persistence.OneToOne;
 
-import br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.UsuarioJPA;
+import br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.Usuario;
 
 public class Email {
 
@@ -10,7 +10,7 @@ public class Email {
 	private String endereco;
 	
 	@OneToOne
-	private UsuarioJPA usuario;
+	private Usuario usuario;
 	
 	public Email(String endereco) {
 		if (endereco == null || 

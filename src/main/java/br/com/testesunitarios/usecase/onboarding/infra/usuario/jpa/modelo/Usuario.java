@@ -8,11 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class UsuarioJPA {
+public class Usuario {
 
 
 
-	public UsuarioJPA(String cpf, String nome, String sobrenome, EmailJPA email) {
+	public Usuario(String cpf, String nome, String sobrenome, Email email) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
@@ -31,7 +31,7 @@ public class UsuarioJPA {
 
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	private EmailJPA email;
+	private Email email;
 
 	public Long getId() {
 		return id;
@@ -65,11 +65,11 @@ public class UsuarioJPA {
 		this.sobrenome = sobrenome;
 	}
 
-	public EmailJPA getEmail() {
+	public Email getEmail() {
 		return email;
 	}
 
-	public void setEmail(EmailJPA email) {
+	public void setEmail(Email email) {
 		this.email = email;
 	}
 
