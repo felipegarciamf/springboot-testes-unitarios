@@ -1,23 +1,24 @@
-package br.com.testesunitarios.usecase.onboarding.dominio.usuario;
+package br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 import br.com.testesunitarios.usecase.onboarding.dominio.usuario.vos.Email;
-import br.com.testesunitarios.usecase.onboarding.dominio.usuario.vos.Telefone;
 
-public class Usuario {
+@Entity
+public class UsuarioJPA {
 
-	
-	
-	public Usuario(String cpf, String nome, String sobrenome, Email email, List<Telefone> telefones) {
-		this.cpf = cpf;
-		this.nome = nome;
-		this.sobrenome = sobrenome;
-		this.email = email;
-		this.telefones = telefones;
+	public UsuarioJPA(br.com.testesunitarios.usecase.onboarding.dominio.usuario.Usuario usuario) {
+		this.cpf = usuario.getCpf();
+		this.nome = usuario.getNome();
+		this.sobrenome = usuario.getSobrenome();
+		this.email = usuario.getEmail();
 	}
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	private String cpf;
@@ -27,8 +28,6 @@ public class Usuario {
 	private String sobrenome;
 
 	private Email email;
-
-	private List<Telefone> telefones = new ArrayList<>();
 
 	public Long getId() {
 		return id;
@@ -68,14 +67,6 @@ public class Usuario {
 
 	public void setEmail(Email email) {
 		this.email = email;
-	}
-
-	public List<Telefone> getTelefones() {
-		return telefones;
-	}
-
-	public void setTelefones(List<Telefone> telefones) {
-		this.telefones = telefones;
 	}
 
 }
