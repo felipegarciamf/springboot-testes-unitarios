@@ -1,0 +1,13 @@
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\controller\UsuarioController.java
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\SpringBootTestesUntiariosApplication.java
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\usecase\onboarding\infra\usuario\jpa\repository\UsuarioJPARepository.java
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\usecase\onboarding\infra\usuario\jpa\utils\UsuarioConverter.java
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\usecase\onboarding\dominio\usuario\dtos\UsuarioDto.java
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\usecase\onboarding\infra\usuario\jpa\modelo\Email.java
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\usecase\onboarding\dominio\usuario\dtos\UsuarioForm.java
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\usecase\onboarding\aplicacao\usuario\cadastrar\CadastrarUsuario.java
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\usecase\onboarding\dominio\usuario\Usuario.java
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\usecase\onboarding\infra\usuario\jpa\repository\UsuarioRepositoryService.java
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\usecase\onboarding\dominio\usuario\vos\Email.java
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\usecase\onboarding\infra\usuario\jpa\modelo\Usuario.java
+C:\Users\Felipe\OneDrive\Documentos\Projetos\Java\springboot-testes-unitarios\src\main\java\br\com\testesunitarios\usecase\onboarding\dominio\usuario\interfaces\RepositorioDeUsuarios.java
