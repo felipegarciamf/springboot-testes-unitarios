@@ -1,10 +1,10 @@
-package br.com.testesunitarios.onboarding.infra.usuario;
+package br.com.testesunitarios.usecase.onboarding.infra.usuario;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.testesunitarios.onboarding.dominio.usuario.Usuario;
-import br.com.testesunitarios.onboarding.dominio.usuario.interfaces.RepositorioDeUsuarios;
+import br.com.testesunitarios.usecase.onboarding.dominio.usuario.Usuario;
+import br.com.testesunitarios.usecase.onboarding.dominio.usuario.interfaces.RepositorioDeUsuarios;
 
 
 @Service

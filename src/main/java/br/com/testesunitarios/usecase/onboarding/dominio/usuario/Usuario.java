@@ -1,10 +1,10 @@
-package br.com.testesunitarios.onboarding.dominio.usuario;
+package br.com.testesunitarios.usecase.onboarding.dominio.usuario;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.testesunitarios.onboarding.dominio.usuario.vos.Email;
-import br.com.testesunitarios.onboarding.dominio.usuario.vos.Telefone;
+import br.com.testesunitarios.usecase.onboarding.dominio.usuario.vos.Email;
+import br.com.testesunitarios.usecase.onboarding.dominio.usuario.vos.Telefone;
 
 public class Usuario {
 

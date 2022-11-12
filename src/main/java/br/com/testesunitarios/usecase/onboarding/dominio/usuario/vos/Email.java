@@ -1,4 +1,4 @@
-package br.com.testesunitarios.onboarding.dominio.usuario.vos;
+package br.com.testesunitarios.usecase.onboarding.dominio.usuario.vos;
 
 public class Email {
 
