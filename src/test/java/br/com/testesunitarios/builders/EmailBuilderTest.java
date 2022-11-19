@@ -1,6 +1,6 @@
 package br.com.testesunitarios.builders;
 
-import br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.Email;
+import br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.EmailEntity;
 
 public class EmailBuilderTest {
 	
@@ -17,8 +17,8 @@ public class EmailBuilderTest {
 		return this;
 	}
 	
-	public Email build() {
-		return new Email(endereco);
+	public EmailEntity build() {
+		return new EmailEntity(endereco);
 	}
 	
 }

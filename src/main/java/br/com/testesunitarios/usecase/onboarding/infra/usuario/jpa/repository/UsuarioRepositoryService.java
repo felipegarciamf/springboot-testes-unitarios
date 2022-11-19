@@ -17,7 +17,7 @@ public class UsuarioRepositoryService implements RepositorioDeUsuarios {
 	@Override
 	public void cadastrarUsuario(Usuario usuarioDominio) {
 		
-		br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.Usuario converter = UsuarioConverter.usuarioConverter(usuarioDominio);
+		br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.UsuarioEntity converter = UsuarioConverter.usuarioConverter(usuarioDominio);
 		
 		usuarioJPARepository.save(converter);		
 	}

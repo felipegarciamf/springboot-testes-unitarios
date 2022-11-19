@@ -1,6 +1,6 @@
 package br.com.testesunitarios.builders;
 
-import br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.Usuario;
+import br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.UsuarioEntity;
 
 public class UsuarioBuilderTest {
 
@@ -39,8 +39,8 @@ public class UsuarioBuilderTest {
 		return this;
 	}
 
-	public Usuario builder() {
-		return new Usuario(cpf, nome, sobrenome, new EmailBuilderTest().build());
+	public UsuarioEntity builder() {
+		return new UsuarioEntity(cpf, nome, sobrenome, new EmailBuilderTest().build());
 	}
 
 }

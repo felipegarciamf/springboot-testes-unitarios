@@ -10,7 +10,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import br.com.testesunitarios.builders.UsuarioBuilderTest;
-import br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.Usuario;
+import br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.UsuarioEntity;
 
 
 
@@ -36,7 +36,7 @@ class UsuarioJPARepositoryTest {
 	@Test
 	void deveCadastrarUsuario() {
 				
-		Usuario usuario = new UsuarioBuilderTest().builder();
+		UsuarioEntity usuario = new UsuarioBuilderTest().builder();
 		usuarioJPARepository.save(usuario);
 		assertThat(usuario.getCpf()).isEqualTo("40173586830");
 		assertThat(usuario.getEmail().getEndereco()).isEqualTo("teste@gmail.com");

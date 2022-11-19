@@ -6,13 +6,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
-public class Usuario {
+@Table(name = "usuario")
+public class UsuarioEntity {
 
 
 
-	public Usuario(String cpf, String nome, String sobrenome, Email email) {
+	public UsuarioEntity(String cpf, String nome, String sobrenome, EmailEntity email) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
@@ -31,7 +33,7 @@ public class Usuario {
 
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	private Email email;
+	private EmailEntity email;
 
 	public Long getId() {
 		return id;
@@ -65,11 +67,11 @@ public class Usuario {
 		this.sobrenome = sobrenome;
 	}
 
-	public Email getEmail() {
+	public EmailEntity getEmail() {
 		return email;
 	}
 
-	public void setEmail(Email email) {
+	public void setEmail(EmailEntity email) {
 		this.email = email;
 	}
 
