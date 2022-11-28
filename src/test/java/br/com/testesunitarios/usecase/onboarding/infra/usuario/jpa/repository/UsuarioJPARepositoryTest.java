@@ -19,10 +19,7 @@ import br.com.testesunitarios.usecase.onboarding.infra.usuario.jpa.modelo.Usuari
 @ActiveProfiles("test")
 class UsuarioJPARepositoryTest {
 	
-	
 
-	
-	
 	@BeforeEach
 	public void init() {
 		
